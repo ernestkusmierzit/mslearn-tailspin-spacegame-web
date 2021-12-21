@@ -3,6 +3,18 @@
 # Add steps that run tests, create a NuGet package, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
+trigger:
+- none
+
+pool:
+  name: 'MyAgentPool'
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+
+
 # trigger:
 # - main
 
@@ -15,12 +27,3 @@
 # steps:
 # - script: dotnet build --configuration $(buildConfiguration)
 #   displayName: 'dotnet build $(buildConfiguration)'
- 
-pool:  
-   name: 'MyAgentPool' 
-     
- trigger: none 
-     
- steps: 
- - script: echo Hello, world! 
-   displayName: 'Run a one-line script' 
